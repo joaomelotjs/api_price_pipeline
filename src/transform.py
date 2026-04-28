@@ -1,10 +1,12 @@
 def transform_data(df):
 
-    # Separar rating em colunas
+    print("🔄 Transformando dados...")
+
+    # Separar rating
     df['rating_rate'] = df['rating'].apply(lambda x: x['rate'])
     df['rating_count'] = df['rating'].apply(lambda x: x['count'])
 
-    # Selecionar colunas importantes
+    # Selecionar colunas
     df = df[[
         'id',
         'title',
@@ -14,6 +16,6 @@ def transform_data(df):
         'rating_count'
     ]]
 
-    print("Dados transformados com sucesso!")
+    print("✅ Dados transformados com sucesso!")
 
     return df

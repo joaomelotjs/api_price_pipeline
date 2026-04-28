@@ -48,7 +48,7 @@ API → Extract → Transform → Load → Visualização
 
 ### ⭐ Top Produtos por Avaliação
 
-![Top Products](output/charts/top_products_rating.png)
+![Top Products](output/charts/top_rated_products.png)
 
 ---
 

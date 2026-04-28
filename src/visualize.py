@@ -3,9 +3,11 @@ import os
 
 def generate_charts(df):
 
+    print("📊 Gerando gráficos...")
+
     os.makedirs('output/charts', exist_ok=True)
 
-    # TOP produtos por avaliação
+    # Top produtos por avaliação
     top_products = df.sort_values(
         by='rating_rate',
         ascending=False
@@ -18,17 +20,19 @@ def generate_charts(df):
         top_products['rating_rate']
     )
 
-    plt.title('Top Produtos por Avaliação')
+    plt.title('Top Rated Products')
+    plt.xlabel('Avaliação')
+    plt.ylabel('Produto')
 
     plt.tight_layout()
 
     plt.savefig(
-        'output/charts/top_products_rating.png'
+        'output/charts/top_rated_products.png'
     )
 
     plt.close()
 
-    # Categorias mais populares
+    # Popularidade por categoria
     category_popularity = df.groupby(
         'category'
     )['rating_count'].sum()
@@ -37,7 +41,9 @@ def generate_charts(df):
 
     category_popularity.plot(kind='bar')
 
-    plt.title('Popularidade por Categoria')
+    plt.title('Category Popularity')
+    plt.xlabel('Categoria')
+    plt.ylabel('Quantidade de avaliações')
 
     plt.tight_layout()
 
@@ -47,4 +53,4 @@ def generate_charts(df):
 
     plt.close()
 
-    print("Gráficos gerados com sucesso!")
+    print("✅ Gráficos gerados com sucesso!")

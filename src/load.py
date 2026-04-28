@@ -3,6 +3,8 @@ import os
 
 def save_to_db(df):
 
+    print("💾 Salvando dados no banco...")
+
     os.makedirs('database', exist_ok=True)
 
     conn = sqlite3.connect('database/products.db')
@@ -16,4 +18,4 @@ def save_to_db(df):
 
     conn.close()
 
-    print("Dados salvos no banco com sucesso!")
+    print("✅ Dados salvos no banco com sucesso!")
