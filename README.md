@@ -6,12 +6,14 @@ Pipeline de engenharia de dados desenvolvido em Python para ingestão, transform
 
 ## 🚀 Tecnologias utilizadas
 
-* Python
-* Pandas
-* Requests
-* PostgreSQL
-* SQLAlchemy
-* Matplotlib
+- Python
+- Pandas
+- Requests
+- PostgreSQL
+- SQLAlchemy
+- Matplotlib
+- Streamlit
+- python-dotenv
 
 ---
 
@@ -28,12 +30,15 @@ Este projeto simula um pipeline de dados de e-commerce, automatizando a coleta d
 * `database/` → banco PostgreSQL utilizado no projeto
 * `run_pipeline.bat` → automação da execução do pipeline
 * `requirements.txt` → dependências do projeto
+dashboard/
+logs/
+.env
 
 ---
 
 ## 🔄 Fluxo do Pipeline
 
-API → Extract → Transform → PostgreSQL → Visualização
+API → Extract → Transform → PostgreSQL → Dashboard
 
 ---
 
@@ -53,13 +58,16 @@ API → Extract → Transform → PostgreSQL → Visualização
 
 ## 📌 Funcionalidades
 
-* Consumo de API REST
-* Tratamento de dados JSON
-* Transformação de dados com Pandas
-* Armazenamento em PostgreSQL
-* Geração automática de gráficos
-* Logs de execução no terminal
-* Pipeline automatizado via `.bat`
+- Consumo de API REST
+- Tratamento de dados JSON
+- Transformação de dados com Pandas
+- Armazenamento em PostgreSQL
+- Geração automática de gráficos
+- Logs de execução no terminal
+- Pipeline automatizado via `.bat`
+- Dashboard interativo
+- Logging profissional
+- Variáveis de ambiente .env
 
 ---
 
@@ -131,4 +139,22 @@ O pipeline realiza automaticamente:
 * Criação de visualizações analíticas
 * Execução automatizada do fluxo completo
 
-```
+📈 Dashboard Interativo
+
+O projeto conta com um dashboard web desenvolvido em Streamlit para visualização dos dados armazenados no PostgreSQL.
+
+O dashboard apresenta:
+
+KPIs gerais
+![Dashboard 1](dashboard/images/dashboard_1.jpeg)
+
+Produtos mais bem avaliados
+![Dashboard 2](dashboard/images/dashboard_2.jpg)
+
+Distribuição por categoria
+![Dashboard 3](dashboard/images/dashboard_3.jpg)
+
+Tabela interativa de produtos
+![Dashboard 4](dashboard/images/dashboard_4.jpg)
+
+Visualizações gráficas em tempo real
