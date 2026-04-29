@@ -1,9 +1,10 @@
 import matplotlib.pyplot as plt
 import os
+from src.logger import logger
 
 def generate_charts(df):
 
-    print("📊 Gerando gráficos...")
+    logger.info("Gerando gráficos...")
 
     os.makedirs('output/charts', exist_ok=True)
 
@@ -53,4 +54,4 @@ def generate_charts(df):
 
     plt.close()
 
-    print("✅ Gráficos gerados com sucesso!")
+    logger.info("Gráficos gerados com sucesso!")

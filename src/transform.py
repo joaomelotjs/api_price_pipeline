@@ -1,6 +1,8 @@
+from src.logger import logger
+
 def transform_data(df):
 
-    print("🔄 Transformando dados...")
+    logger.info("Transformando dados...")
 
     # Separar rating
     df['rating_rate'] = df['rating'].apply(lambda x: x['rate'])
@@ -16,6 +18,6 @@ def transform_data(df):
         'rating_count'
     ]]
 
-    print("✅ Dados transformados com sucesso!")
+    logger.info("Dados transformados com sucesso!")
 
     return df

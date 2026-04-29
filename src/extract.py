@@ -1,9 +1,10 @@
 import requests
 import pandas as pd
+from src.logger import logger
 
 def extract_data():
 
-    print("🌐 Conectando na API...")
+    logger.info("Conectando na API...")
 
     url = "https://fakestoreapi.com/products"
 
@@ -13,6 +14,6 @@ def extract_data():
 
     df = pd.DataFrame(data)
 
-    print(f"✅ {len(df)} produtos extraídos com sucesso!")
+    logger.info(f"{len(df)} produtos extraídos com sucesso!")
 
     return df
