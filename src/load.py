@@ -1,21 +1,17 @@
-import sqlite3
-import os
+import psycopg2
+from sqlalchemy import create_engine
 
 def save_to_db(df):
 
-    print("💾 Salvando dados no banco...")
-
-    os.makedirs('database', exist_ok=True)
-
-    conn = sqlite3.connect('database/products.db')
+    engine = create_engine(
+        "postgresql://postgres:080502@localhost:5432/price_pipeline"
+    )
 
     df.to_sql(
-        'products',
-        conn,
-        if_exists='replace',
+        "products",
+        engine,
+        if_exists="replace",
         index=False
     )
 
-    conn.close()
-
-    print("✅ Dados salvos no banco com sucesso!")
+    print("✅ Dados salvos no PostgreSQL com sucesso!")
