@@ -24,6 +24,16 @@ df = pd.read_sql("SELECT * FROM products", engine)
 # Título
 st.title("📊 API Price Pipeline Dashboard")
 
+st.caption("Dados carregados diretamente do PostgreSQL em tempo real")
+
+# Consulta SQL
+st.subheader("Consulta SQL")
+
+st.code(
+    "SELECT * FROM products;",
+    language="sql"
+)
+
 # KPIs
 st.subheader("Resumo Geral")
 

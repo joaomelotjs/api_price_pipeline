@@ -143,7 +143,6 @@ O pipeline realiza automaticamente:
 
 O projeto conta com um dashboard web desenvolvido em Streamlit para visualização dos dados armazenados no PostgreSQL.
 
-O dashboard apresenta:
 
 KPIs gerais
 ![Dashboard 1](dashboard/images/dashboard_1.jpeg)
@@ -156,5 +155,3 @@ Distribuição por categoria
 
 Tabela interativa de produtos
 ![Dashboard 4](dashboard/images/dashboard_4.jpg)
-
-Visualizações gráficas em tempo real
